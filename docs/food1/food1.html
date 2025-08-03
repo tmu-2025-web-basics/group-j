@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="food1-style.css">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'chw8ypr',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+<body>
+    <!-- ページ遷移用の白い画面 -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img 
+                src="../transition/transition1.webp" 
+                alt="おにぎりアニメーション" 
+                class="loading-animation"
+                width="400" 
+                height="400"
+            />
+        </div>
+    </div>
+
+    <!-- メインコンテンツ（最初は非表示） -->
+    <div id="mainContent" class="main-content-hidden">
+    <header>
+        <div class="header-top">
+            <a href="../index.html" class="logo-link">
+                <img src="../food_icon/logoBrown.png" alt="ロゴ" class="top-logo">
+            </a>
+            <div class="food-info">
+                <img src="../food_icon/food1-logo.png" alt="フード１アイコン" class="food-icon">
+                <div class="food-name">麺</div>
+            </div>
+            <div class="hamburger-menu">
+                <button class="hamburger-button" onclick="toggleMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="dropdown-menu" id="dropdownMenu">
+                    <a href="../index.html">トップページ</a>
+                    <a href="../food1/food1.html">麺</a>
+                    <a href="../food2/food2.html">サラダ</a>
+                    <a href="../food3/food3.html">サンドウィッチ</a>
+                    <a href="../food4/food4.html">おにぎり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+      
+        <div class="content" id="content">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food1_photo/01-main.jpg" alt="メイン画像" id="mainImage1">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food1_photo/01-01.jpg" alt="画像1" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-01.jpg')">
+                    <img src="../food_photo/food1_photo/01-02.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-02.jpg')">
+                    <img src="../food_photo/food1_photo/01-03.jpg" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-03.jpg')">
+                    <img src="../food_photo/food1_photo/01-04.jpg" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-04.jpg')">
+                    <img src="../food_photo/food1_photo/01-05.jpg" alt="画像5" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-05.jpg')">
+                    <img src="../food_photo/food1_photo/01-06.jpg" alt="画像6" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-06.jpg')">
+                    <img src="../food_photo/food1_photo/01-07.jpg" alt="画像7" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-07.jpg')">
+                    <img src="../food_photo/food1_photo/01-08.jpg" alt="画像8" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food1_photo/01-08.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">セブンイレブン</div>
+                <h1>冷し中華　　　　　　　　　　　                 572円、446kcal</h1>
+                <div class="info-row">
+                    <h2>具材の割合<br><span style="font-size: 0.8em; color: #333;">麺203g、スープ92g、豚肉13g、錦糸卵10g、きゅうり13g、紅生姜2g、もやし8g、わかめ5g、茹で卵25g</span></h2>
+                    <h3>感想<br><span style="font-size: 0.8em; color: #333;">4種の中で最も麺がちぎれやすかったが、食べる際には柔らかく喉を通りやすかった。野菜類は新鮮で食感が良かった。また、具の量が比較的多くサイズも最も均等であったため、麺だけで飽きずに食べられた。</span></h3>
+                </div>
+            </div>
+            <h3></h3>
+        </div>
+           <div class="content2" id="content2">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food1_photo/02-main.jpg" alt="メイン画像" id="mainImage2">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food1_photo/02-01.jpg" alt="画像1" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-01.jpg')">
+                    <img src="../food_photo/food1_photo/02-02.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-02.jpg')">
+                    <img src="../food_photo/food1_photo/02-03.jpg" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-03.jpg')">
+                    <img src="../food_photo/food1_photo/02-04.jpg" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-04.jpg')">
+                    <img src="../food_photo/food1_photo/02-05.jpg" alt="画像5" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-05.jpg')">
+                    <img src="../food_photo/food1_photo/02-06.jpg" alt="画像6" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-06.jpg')">
+                    <img src="../food_photo/food1_photo/02-07.jpg" alt="画像7" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food1_photo/02-07.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">ファミリーマート</div>
+                <h2>6種具材の冷し中華　　　　　　　　　　　                 578円、419kcal</h2>
+                <div class="info-row">
+                    <h3>具材の割合<br><span style="font-size: 0.8em; color: #333;">麺272g、スープ66g、豚肉19g、錦糸卵9g、きゅうり9g、紅生姜4g、もやし9g、わかめ4g、茹で卵なし</span></h3>
+                    <h4>感想<br><span style="font-size: 0.8em; color: #333;">麺は少し細めで弾力があり、ちぢれが最も多かった。麺が美味しいことに加えて焼豚の味つけや生姜の香りが十分だったため、味には満足感があった。スープの量がちょうど良く、最後に残ることがなかった。</span></h4>
+                </div>
+            </div>
+            <h4></h4>
+        </div>
+           <div class="content3">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food1_photo/03-main.jpg" alt="メイン画像" id="mainImage3">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food1_photo/03-01.jpg" alt="画像1" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-01.jpg')">
+                    <img src="../food_photo/food1_photo/03-02.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-02.jpg')">
+                    <img src="../food_photo/food1_photo/03-03.jpg" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-03.jpg')">
+                    <img src="../food_photo/food1_photo/03-04.jpg" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-04.jpg')">
+                    <img src="../food_photo/food1_photo/03-05.jpg" alt="画像5" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-05.jpg')">
+                    <img src="../food_photo/food1_photo/03-06.jpg" alt="画像6" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-06.jpg')">
+                    <img src="../food_photo/food1_photo/03-07.jpg" alt="画像7" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food1_photo/03-07.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">ローソン</div>
+                <h3>冷し中華　　　　　　　　　　　                 599円、463kcal</h3>
+                <div class="info-row">
+                    <h4>具材の割合<br><span style="font-size: 0.8em; color: #333;">麺225g、スープ104g、豚肉28g、錦糸卵3g、きゅうり6g、紅生姜3g、もやし13g、わかめなし、鶏肉6g、茹で卵75g</span></h4>
+                    <h5>感想<br><span style="font-size: 0.8em; color: #333;">麺はファミマと比べて少し太めでツルツルしており、喉越しがよかった。きゅうりの食感や生姜の香りは良かったが、豚肉は油が多く、肉の旨みが少なかった。スープは量が多い割に味が薄く、水っぽく感じた。</span></h5>
+                </div>
+            </div>
+            <h5></h5>
+        </div>
+           <div class="content4">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food1_photo/04-main.jpg" alt="メイン画像" id="mainImage4">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food1_photo/04-01.jpg" alt="画像1" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-01.jpg')">
+                    <img src="../food_photo/food1_photo/04-02.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-02.jpg')">
+                    <img src="../food_photo/food1_photo/04-03.jpg" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-03.jpg')">
+                    <img src="../food_photo/food1_photo/04-04.jpg" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-04.jpg')">
+                    <img src="../food_photo/food1_photo/04-05.jpg" alt="画像5" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-05.jpg')">
+                    <img src="../food_photo/food1_photo/04-06.jpg" alt="画像6" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-06.jpg')">
+                    <img src="../food_photo/food1_photo/04-07.jpg" alt="画像7" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food1_photo/04-07.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">まいばすけっと</div>
+                <h4>6種具材の本格冷し中華　　　　　　　　　　　                 322円、304kcal</h4>
+                <div class="info-row">
+                    <h5>具材の割合<br><span style="font-size: 0.8em; color: #333;">麺163g、スープ64g、豚肉（ハム）16g、錦糸卵8g、きゅうり8g、紅生姜8g、もやしなし、わかめ6g、茹で卵24g</span></h5>
+                    <h6>感想<br><span style="font-size: 0.8em; color: #333;">麺にあまりコシがなく、食感はイマイチ。焼豚ではなくハムが入っていることや、もやしがないことが、全体的な味や食感の印象を薄くしていた。そのため満足感はやや少なめ。スープの濃さは普通だった。</span></h6>
+                </div>
+            </div>
+            <h6></h6>
+        </div>
+        
+
+        <div class="author-recommendation">
+            <h2>筆者のおすすめ</h2>
+            <div class="recommendation-content">
+                <div class="recommendation-text">
+                    <p>今回食べ比べした中での1番のおすすめは<strong>ファミリーマートの冷し中華</strong>です。</p>
+                    <p>価格と味のバランスが最も良く、具材の種類も豊富でした。特にもやしの食感とスープの味わいが印象的でした。</p>
+                    <p>セブンイレブンも美味しかったですが、価格を考慮するとファミリーマートがコスパ面で優れていました。</p>
+                    <p>しっかりとした食べ応えを求める方は、ローソンの冷し中華もおすすめです。</p>
+                </div>
+            </div>
+            <div class="recommendation-button-container">
+                <button class="recommendation-button" onclick="scrollToProduct('content2')">該当商品はこちら</button>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+
+        function changeMainImage(mainImageId, newSrc) {
+            const mainImage = document.getElementById(mainImageId);
+            mainImage.src = newSrc;
+            
+
+            const thumbnails = mainImage.closest('.photo-layout').querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src.includes(newSrc.split('/').pop())) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstThumbnails = document.querySelectorAll('.thumbnail-list .thumbnail:first-child');
+            firstThumbnails.forEach(thumb => {
+                thumb.classList.add('active');
+            });
+        });
+
+
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            menu.classList.toggle('show');
+            button.classList.toggle('active');
+        }
+
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            
+            if (!hamburgerMenu.contains(event.target)) {
+                menu.classList.remove('show');
+                button.classList.remove('active');
+            }
+        });
+
+        function scrollToProduct(targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
+</body>
+<div class="other-products-section">
+    <div class="other-products-label">他の商品も見る</div>
+    <div class="food-container">
+        <a href="../food1/food1.html?animation=true" class="food-link">
+            <div class="food-name-label">麺</div>
+            <div class="food-bg" style="background-image: url('../food_icon/food1-bg.jpg');">
+                <div class="food-overlay"></div>
+                <div class="arrow-icon">→</div>
+                <div class="food-logo">
+                    <img src="../food_icon/food1-logo.png" alt="フード1">
+                </div>
+            </div>
+        </a>
+        <a href="../food2/food2.html?animation=true" class="food-link">
+            <div class="food-name-label">サラダ</div>
+            <div class="food-bg" style="background-image: url('../food_icon/food2-bg.jpg');">
+                <div class="food-overlay"></div>
+                <div class="arrow-icon">→</div>
+                <div class="food-logo">
+                    <img src="../food_icon/food2-logo.png" alt="フード２">
+                </div>
+            </div>
+        </a>
+        <a href="../food4/food4.html?animation=true" class="food-link">
+            <div class="food-name-label">おにぎり</div>
+            <div class="food-bg" style="background-image: url('../food_icon/food4-bg.jpg');">
+                <div class="food-overlay"></div>
+                <div class="arrow-icon">→</div>
+                <div class="food-logo">
+                    <img src="../food_icon/food4-logo.png" alt="フード４">
+                </div>
+            </div>
+        </a>
+    </div>
+    </div> <!-- mainContent終了 -->
+
+    <script>
+        // ページ遷移アニメーション
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const mainContent = document.getElementById('mainContent');
+            
+            // URLパラメータをチェックしてアニメーションを表示するかどうか決定
+            const urlParams = new URLSearchParams(window.location.search);
+            const showAnimation = urlParams.get('animation') === 'true';
+            
+            if (showAnimation) {
+                // アニメーション表示：2秒後にメインコンテンツを表示
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                        mainContent.classList.remove('main-content-hidden');
+                        mainContent.style.opacity = '1';
+                        initializePage();
+                    }, 500); // フェードアウト時間
+                }, 1000); // 1秒間白い画面を表示
+                
+            } else {
+                // 通常の表示（アニメーションなし）
+                loadingScreen.style.display = 'none';
+                mainContent.classList.remove('main-content-hidden');
+                mainContent.style.opacity = '1';
+                initializePage();
+            }
+        });
+
+        // 既存の初期化処理をまとめる
+        function initializePage() {
+            const firstThumbnails = document.querySelectorAll('.thumbnail-list .thumbnail:first-child');
+            firstThumbnails.forEach(thumb => {
+                thumb.classList.add('active');
+            });
+        }
+
+        function changeMainImage(mainImageId, newSrc) {
+            const mainImage = document.getElementById(mainImageId);
+            mainImage.src = newSrc;
+            
+            const thumbnails = mainImage.closest('.photo-layout').querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src.includes(newSrc.split('/').pop())) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            menu.classList.toggle('show');
+            button.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            
+            if (!hamburgerMenu.contains(event.target)) {
+                menu.classList.remove('show');
+                button.classList.remove('active');
+            }
+        });
+
+        function scrollToProduct(targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
+</body>
+</html>

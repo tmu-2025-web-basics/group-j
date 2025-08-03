@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="food4-style.css">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'chw8ypr',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+<body>
+    <!-- ページ遷移用の白い画面 -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img 
+                src="../transition/transition4.webp" 
+                alt="おにぎりアニメーション" 
+                class="loading-animation"
+                width="400" 
+                height="400"
+            />
+        </div>
+    </div>
+
+    <!-- メインコンテンツ（最初は非表示） -->
+    <div id="mainContent" class="main-content-hidden">
+    <header>
+        <div class="header-top">
+            <a href="../index.html" class="logo-link">
+                <img src="../food_icon/logoBrown.png" alt="ロゴ" class="top-logo">
+            </a>
+            <div class="food-info">
+                <img src="../food_icon/food4-logo.png" alt="フード４アイコン" class="food-icon">
+                <div class="food-name">おにぎり</div>
+            </div>
+            <div class="hamburger-menu">
+                <button class="hamburger-button" onclick="toggleMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="dropdown-menu" id="dropdownMenu">
+                    <a href="../index.html">トップページ</a>
+                    <a href="../food1/food1.html">麺</a>
+                    <a href="../food2/food2.html">サラダ</a>
+                    <a href="../food3/food3.html">サンドウィッチ</a>
+                    <a href="../food4/food4.html">おにぎり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+      
+        <div class="content" id="content">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food4_photo/711_1.jpg" alt="メイン画像" id="mainImage1">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food4_photo/711_1.jpg" alt="画像1" class="thumbnail active" onclick="changeMainImage('mainImage1', '../food_photo/food4_photo/711_1.jpg')">
+                    <img src="../food_photo/food4_photo/711_2.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food4_photo/711_2.jpg')">
+                    <img src="../food_photo/food4_photo/711_3.jpg" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage1', '../food_photo/food4_photo/711_3.jpg')">
+                    <img src="../food_photo/food4_photo/711_4.JPG" alt="画像4" class="thumbnail rotate-horizontal" onclick="changeMainImage('mainImage1', '../food_photo/food4_photo/711_4.JPG')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">セブンイレブン</div>
+                <h1>香ばし炒め　玉子チャーハン　　　　　　　　　　　                 税込149円、184kcal</h1>
+                <div class="info-row">
+                    <h2>具材の割合<br><span style="font-size: 0.8em; color: #333;">ご飯96g<br>玉子5g<br></span></h2>
+                    <h3>感想<br><span style="font-size: 0.8em; color: #333;">割と油感じる口当たり。味は濃いめなので好きな人はぜひ。<br>たまごを感じたい人はおすすめしない。</span></h3>
+                </div>
+            </div>
+            <h3></h3>
+        </div>
+           <div class="content2" id="content2">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food4_photo/fm_1.JPG" alt="メイン画像" id="mainImage2">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food4_photo/fm_1.JPG" alt="画像1" class="thumbnail active" onclick="changeMainImage('mainImage2', '../food_photo/food4_photo/fm_1.JPG')">
+                    <img src="../food_photo/food4_photo/fm_2.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food4_photo/fm_2.jpg')">
+                    <img src="../food_photo/food4_photo/fm_3.jpg" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food4_photo/fm_3.jpg')">
+                    <img src="../food_photo/food4_photo/fm_4.jpg" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage2', '../food_photo/food4_photo/fm_4.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">ファミリーマート</div>
+                <h2>高菜たくあん　　　　　　　　　　　                 148円、153kcal</h2>
+                <div class="info-row">
+                    <h3>具材の割合<br><span style="font-size: 0.8em; color: #333;">ご飯100g<br>高菜6g<br>たくあん2g</span></h3>
+                    <h4>感想<br><span style="font-size: 0.8em; color: #333;">結構米もちもち。たくあんは感じない<br>高菜は普通に感じるので混ぜ込みご飯とか好きな人におすすめ。</span></h4>
+                </div>
+            </div>
+            <h4></h4>
+        </div>
+           <div class="content3" id="content3">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food4_photo/lw_1.jpg" alt="メイン画像" id="mainImage3">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food4_photo/lw_1.jpg" alt="画像1" class="thumbnail active" onclick="changeMainImage('mainImage3', '../food_photo/food4_photo/lw_1.jpg')">
+                    <img src="../food_photo/food4_photo/lm_2.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food4_photo/lm_2.jpg')">
+                    <img src="../food_photo/food4_photo/lm_3.JPG" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food4_photo/lm_3.JPG')">
+                    <img src="../food_photo/food4_photo/lm_4.jpg" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage3', '../food_photo/food4_photo/lm_4.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">ローソン</div>
+                <h3>たっぷり　食物繊維が摂れる枝豆と塩昆布　　　　　　　　　　　                 181円、172kcal</h3>
+                <div class="info-row">
+                    <h4>具材の割合<br><span style="font-size: 0.8em; color: #333;">ご飯104g<br>枝豆8g<br>塩昆布約2g</span></h4>
+                    <h5>感想<br><span style="font-size: 0.8em; color: #333;">枝豆が結構入ってて嬉しい。<br>塩昆布がちゃんとご飯い混ざってて結構味ある。</span></h5>
+                </div>
+            </div>
+            <h5></h5>
+        </div>
+           <div class="content4" id="content4">
+            <div class="photo-layout">
+                <div class="main-image">
+                    <img src="../food_photo/food4_photo/nd_1.jpg" alt="メイン画像" id="mainImage4">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="../food_photo/food4_photo/nd_1.jpg" alt="画像1" class="thumbnail active" onclick="changeMainImage('mainImage4', '../food_photo/food4_photo/nd_1.jpg')">
+                    <img src="../food_photo/food4_photo/nd_2.jpg" alt="画像2" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food4_photo/nd_2.jpg')">
+                    <img src="../food_photo/food4_photo/nd_3.JPG" alt="画像3" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food4_photo/nd_3.JPG')">
+                    <img src="../food_photo/food4_photo/nd_4.JPG" alt="画像4" class="thumbnail" onclick="changeMainImage('mainImage4', '../food_photo/food4_photo/nd_4.jpg')">
+                </div>
+            </div>
+            <div class="text-info-container">
+                <div class="store-name">NewDays</div>
+                <h4>直火炒め　炒飯　　　　　　　　　　　                 175円、238kcal</h4>
+                <div class="info-row">
+                    <h5>具材の割合<br><span style="font-size: 0.8em; color: #333;">ご飯96g<br>玉子8g<br>チャーシュー6g</span></h5>
+                    <h6>感想<br><span style="font-size: 0.8em; color: #333;">具材が結構大きめで満足感あり。ちゃんと炒飯食べてる感じがする。<br>味はそこまで濃くないので万人受けしそう。</span></h6>
+                </div>
+            </div>
+            <h6></h6>
+        </div>
+        
+
+        <div class="author-recommendation">
+            <h2>筆者のおすすめ</h2>
+            <div class="recommendation-content">
+                <div class="recommendation-text">
+                    <p>コンビニのおにぎりって種類ありますよね。ここで紹介できなかったのが惜しいですが、私のおすすめは<strong>ローソンのたっぷり　食物繊維が摂れる枝豆と塩昆布</strong>です。</p>
+                    <p>分解してみて、枝豆たくさん入ってる時点でかなり好感度ある。ありがとうございます。塩っけもちょうど良くて、栄養もいい感じなのでおすすめです。</p>
+                    <p>炒飯おにぎりを今回は二つ紹介しましたが、玉子炒飯を好きな人にはNewDaysの方が玉子を感じられるのでおすすめです。</p>
+                </div>
+            </div>
+            <div class="recommendation-button-container">
+                <button class="recommendation-button" onclick="scrollToProduct('content3')">該当商品はこちら</button>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+
+        function changeMainImage(mainImageId, newSrc) {
+            const mainImage = document.getElementById(mainImageId);
+            mainImage.src = newSrc;
+            
+            // 711_4の画像の場合は横向きにする
+            if (newSrc.includes('711_4')) {
+                mainImage.classList.add('rotate-horizontal');
+            } else {
+                mainImage.classList.remove('rotate-horizontal');
+            }
+            
+            // サムネイルのアクティブ状態を更新
+            const photoLayout = mainImage.closest('.photo-layout') || mainImage.closest('.content, .content2, .content3, .content4');
+            const thumbnails = photoLayout.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+                // パスの最後の部分（ファイル名）で比較
+                const thumbFileName = thumb.src.split('/').pop();
+                const newFileName = newSrc.split('/').pop();
+                if (thumbFileName === newFileName) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            menu.classList.toggle('show');
+            button.classList.toggle('active');
+        }
+
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            
+            if (!hamburgerMenu.contains(event.target)) {
+                menu.classList.remove('show');
+                button.classList.remove('active');
+            }
+        });
+
+        function scrollToProduct(targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
+</body>
+<div class="other-products-section">
+    <div class="other-products-label">他の商品も見る</div>
+    <div class="food-container">
+        <a href="../food1/food1.html?animation=true" class="food-link">
+            <div class="food-name-label">麺</div>
+            <div class="food-bg" style="background-image: url('../food_icon/food1-bg.jpg');">
+                <div class="food-overlay"></div>
+                <div class="arrow-icon">→</div>
+                <div class="food-logo">
+                    <img src="../food_icon/food1-logo.png" alt="フード1">
+                </div>
+            </div>
+        </a>
+        <a href="../food2/food2.html?animation=true" class="food-link">
+            <div class="food-name-label">サラダ</div>
+            <div class="food-bg" style="background-image: url('../food_icon/food2-bg.jpg');">
+                <div class="food-overlay"></div>
+                <div class="arrow-icon">→</div>
+                <div class="food-logo">
+                    <img src="../food_icon/food2-logo.png" alt="フード２">
+                </div>
+            </div>
+        </a>
+        <a href="../food3/food3.html?animation=true" class="food-link">
+            <div class="food-name-label">サンドウィッチ</div>
+            <div class="food-bg" style="background-image: url('../food_icon/food3-bg.jpg');">
+                <div class="food-overlay"></div>
+                <div class="arrow-icon">→</div>
+                <div class="food-logo">
+                    <img src="../food_icon/food3-logo.png" alt="フード３">
+                </div>
+            </div>
+        </a>
+    </div>
+    </div> <!-- mainContent終了 -->
+
+    <script>
+        // ページ遷移アニメーション
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const mainContent = document.getElementById('mainContent');
+            
+            // URLパラメータをチェックしてアニメーションを表示するかどうか決定
+            const urlParams = new URLSearchParams(window.location.search);
+            const showAnimation = urlParams.get('animation') === 'true';
+            
+            if (showAnimation) {
+                // アニメーション表示：2秒後にメインコンテンツを表示
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                        mainContent.classList.remove('main-content-hidden');
+                        mainContent.style.opacity = '1';
+                        initializePage();
+                    }, 500); // フェードアウト時間
+                }, 1000); // 1秒間白い画面を表示
+                
+            } else {
+                // 通常の表示（アニメーションなし）
+                loadingScreen.style.display = 'none';
+                mainContent.classList.remove('main-content-hidden');
+                mainContent.style.opacity = '1';
+                initializePage();
+            }
+        });
+
+        // 既存の初期化処理をまとめる
+        function initializePage() {
+            const firstThumbnails = document.querySelectorAll('.thumbnail-list .thumbnail:first-child');
+            firstThumbnails.forEach(thumb => {
+                thumb.classList.add('active');
+            });
+        }
+
+        function changeMainImage(mainImageId, newSrc) {
+            const mainImage = document.getElementById(mainImageId);
+            mainImage.src = newSrc;
+            
+            const thumbnails = mainImage.closest('.photo-layout').querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src.includes(newSrc.split('/').pop())) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            menu.classList.toggle('show');
+            button.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.hamburger-button');
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            
+            if (!hamburgerMenu.contains(event.target)) {
+                menu.classList.remove('show');
+                button.classList.remove('active');
+            }
+        });
+
+        function scrollToProduct(targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
